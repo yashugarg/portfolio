@@ -1,7 +1,7 @@
 ---
 date: '1'
 title: 'Simulate'
-cover: './demo.png'
+coverImage: 'demo.png'
 github: 'https://github.com/builtree/simulate'
 external: 'https://builtree.org/simulate/web/'
 cta: 'https://www.builtree.org/simulate'
