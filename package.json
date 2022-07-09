@@ -20,6 +20,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "prepare": "husky install",
+    "setup": "(npm install -g gatsby-cli && npm install && yarn)",
     "lint-staged": "lint-staged"
   },
   "lint-staged": {

@@ -2,7 +2,7 @@ import React from 'react';
 
 const IconLogo = () => (
   <svg id="logo" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 84 96">
-    <title>Yovin Yahathugoda</title>
+    <title>Logo</title>
     <g transform="scale(0.41 0.41)">
       <g transform="scale(0.42 0.42)">
         <g transform="translate(50.000000, 60.000000)">
