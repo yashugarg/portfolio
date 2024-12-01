@@ -144,16 +144,16 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hello! I'm Yashu Garg and I am a CS undergrad from University of Delhi, India. I enjoy
-              creating applications. My journey strated from creating cross-platform applications in
-              Flutter, but now I am experienced in a number of frontend and backend frameworks!
+              Hello! I'm Yashu Garg, a CS engineer from University of Delhi, India. I enjoy creating
+              applications. My journey strated from creating cross-platform applications in Flutter,
+              but now I am experienced in a number of frontend and backend frameworks!
             </p>
 
             <p>
-              Currently, I am working on strengthening my DSA and Problem Solving alongside making
-              some projects and taking part in hackathons. I am also a part of an organisation{' '}
-              <a href="https://builtree.org/">Builtree</a> where I am working on creating open
-              source softwares to be used by all!
+              Currently, I am working at <a href="https://builtree.org/">Zenskar</a>, building
+              billing and revenue recognition solutions for SaaS companies. I am also strengthening
+              my DSA and Problem-Solving. I am passionate about open source and always work on free
+              software for all!
             </p>
 
             <p>Here are a few technologies I’ve been working with recently:</p>

@@ -65,7 +65,7 @@ const Hero = () => {
   const four = (
     <>
       <p>
-        I’m a student developer with experience in building exceptional production-level projects.
+        I’m a software developer with experience in building exceptional production-level projects.
         I’m passionate about building products that solve real-world problems.
       </p>
     </>
