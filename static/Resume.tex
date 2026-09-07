@@ -1,0 +1,336 @@
+%-------------------------
+% Resume in Latex
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[T1]{fontenc}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{wrapfig}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+\usepackage[sfdefault,lining]{carlito}
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-0.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-3pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that the generated pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{0pt}}
+    % \parbox[t]{0.85\textwidth}{#1}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeExpSubheading}[3]{
+  \item
+  \noindent
+  \makebox[\textwidth][l]{%
+    \makebox[0.3333\textwidth][l]{\textbf{#1}}%
+    \makebox[0.3334\textwidth][c]{\textbf{\small #2}}%
+    \makebox[0.3333\textwidth][r]{\textbf{\small #3}}%
+  }
+  \vspace{-18pt}
+}
+
+\newcommand{\resumeEduHeading}[4]{
+    \item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-2pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.2in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%
+
+
+\begin{document}
+
+
+%----------HEADING----------
+\begin{center}
+    {\Huge \scshape Yashu Garg} \\ \vspace{1pt}
+    % Software Developer \\ \vspace{1pt}
+    \small
+    % \href{tel:+919643154701}{\raisebox{-0.1\height}\faPhone\ \underline{+91 9643154701}} ~
+    \href{mailto:garg.y2001@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{garg.y2001@gmail.com}} ~
+    \href{https://linkedin.com/in/yashugarg/}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/yashugarg}}  ~
+    \href{https://github.com/yashugarg}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/yashugarg}} ~
+    \href{https://yashugarg.com/}{\raisebox{-0.2\height}\faGlobe\ \underline{yashugarg.com}}
+    \vspace{-8pt}
+\end{center}
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeExpSubheading
+      {Founding Engineer}{\underline{\href{https://www.zenskar.com/}{Zenskar}}}{Oct 2023 - Present}
+      \resumeItemListStart
+        \resumeItem{\textbf{Shipped a Go-based event delivery service}, using the transactional outbox pattern to guarantee at-least-once delivery, with sharding, connection pooling, and database advisory locks.}
+        \resumeItem{\textbf{Architected an internal AI platform} integrating Claude agents and RAG across HubSpot, Slack, and Avoma, with role-scoped isolation, database RLS, and Hindsight-powered retrieval.}
+        \resumeItem{\textbf{Modeled contract execution} for Zenskar's python-based pricing engine, validating the design against 60+ production billing scenarios and 12 competitor platforms affecting 10+ enterprise customers.}
+        \resumeItem{\textbf{Delivered the v3 pricing engine's pricing nodes end-to-end}, processing 29K+ contract executions/month at sub-15ms p99 latency in production.}
+        \resumeItem{\textbf{Co-built the billables engine in Python} powering invoice line-item generation, owning snapshot/delta calculations and saga-based recovery for partial failures.}
+        \resumeItem{\textbf{Built Zenskar's HubSpot integration}, letting clients connect their HubSpot account, syncing customers, products, and contracts bi-directionally and eliminating manual data entry.}
+      \resumeItemListEnd
+
+    \resumeExpSubheading
+      {Full Stack Engineer - Intern}{\underline{\href{https://www.zenskar.com/}{Zenskar}}}{May 2023 - Sep 2023}
+      \resumeItemListStart
+        \resumeItem{\textbf{Launched Zenskar's first customer billing portal}, covering subscriptions, invoicing, and RBAC-secured access from initial architecture through production CI/CD.}
+        \resumeItem{\textbf{Implemented Lexical Editor support} for customizable email/document templates, introducing Zenskar-specific nodes for dynamic data population.}
+      \resumeItemListEnd
+
+    \resumeExpSubheading
+      {Software Developer Intern}{\underline{\href{https://fineswap.com/}{Fineswap}}}{Feb 2022 - Apr 2023}
+      \resumeItemListStart
+        \resumeItem{\textbf{Built the \underline{\href{https://swa.ps}{swa.ps}} marketing site} in FreeMarker and Kotlin, showcasing app content and improving SEO.}
+        \resumeItem{\textbf{Improved app performance} with a custom component library built on Flutter's native widgets.}
+      \resumeItemListEnd
+
+    \resumeExpSubheading
+      {GSoC Contributor}{\underline{\href{https://www.python.org/psf/}{Python Software Foundation}}}{May 2022 - Sep 2022}
+      \resumeItemListStart
+        \resumeItem{\textbf{Contributed to Intel's \underline{\href{https://github.com/intel/cve-bin-tool/}{CVE Binary Tool}} through Google Summer of Code}, fuzzing XML and JSON vulnerability report outputs with Google Atheris.}
+        \resumeItem{\textbf{Extended SBOM output with a new mode and richer metadata}, backed by pytest suites reaching 90\%+ coverage.}
+      \resumeItemListEnd
+
+    % \resumeExpSubheading
+    %   {Software Developer Intern}{\underline{\href{https://raahee.in}{Raahee}}}{Sep 2020 - Nov 2021}
+    %   \resumeItemListStart
+    %     \resumeItem{Led the \textbf{App team} to develop and \underline{\href{https://play.google.com/store/apps/details?id=app.raahee.app}{deploy applications}} for users to connect with \textbf{Mental Health Professionals}.}
+    %     \resumeItem{Built \textbf{2 cross-platform apps} with a public community forum, blog feature, personal music player, and journal management.}
+    %     \resumeItem{Designed and implemented \textbf{real-time bi-directional chats} between the apps using \textbf{Socket.io}.}
+    %   \resumeItemListEnd
+
+    % \resumeExpSubheading
+    %   {Flutter Developer Intern}{\underline{\href{https://www.enukesoftware.com}{Enuke Software}}}{Nov 2020 - Feb 2021}
+    %   \resumeItemListStart
+    %     \resumeItem{Implemented a traditional Chinese occasions calendar app called \textbf{Sakya Calendar}, with over \textbf{10k downloads} on \underline{\href{https://play.google.com/store/apps/details?id=com.dogpo.tibetancalendar}{\textbf{Android}}} and \underline{\href{https://apps.apple.com/us/app/sakya-calendar/id1452085952}{\textbf{iOS}}}}
+    %     \resumeItem{Developed a mobile app for delivery drivers using \textbf{GoogleMapsAPI with Track Assistant}.}
+    %     \resumeItem{Improved efficiency of an \textbf{Admin Panel Application} for Inventory Management using \textbf{Bloc} for state management.}
+    % \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeEduHeading
+      {Cluster Innovation Centre, University of Delhi}{Aug 2019 - Jul 2023}
+      {Bachelor of Technology in Information Technology and Mathematical Innovations}{CGPA: \textbf{9.14}}
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{\href{https://www.yashugarg.com/archive}{Projects \small{\faExternalLink*}}}
+    \vspace{-1.4pt}
+    \resumeSubHeadingListStart
+
+      \resumeProjectHeading
+          {\textbf{\underline{\href{https://github.com/renzoku-dev/renzoku-mcp-bridge}{Renzoku MCP Bridge}}} \textbar{} \emph{TypeScript, Model Context Protocol, WebSockets, Node.js}}{May 2026}
+          \resumeItemListStart
+            \resumeItem{\textbf{Built a cross-network MCP bridge} exposing device verbs (notifications, clipboard, device listing) as MCP tools any client (Claude Desktop, Cursor) can invoke against a device on a different network.}
+            \resumeItem{\textbf{Designed a transport-agnostic envelope protocol} with source/target routing and correlation IDs; a WebSocket relay multiplexes requests across a device registry with heartbeat liveness and auto-reconnect.}
+            \resumeItem{\textbf{Hardened verb execution against shell injection} via execFile arg-arrays over Streamable HTTP MCP transport; verified end-to-end across networks against remote devices.}
+          \resumeItemListEnd
+          \vspace{-13pt}
+
+      % \resumeProjectHeading
+      %     {\textbf{\underline{\href{https://github.com/builtree/simulate}{Simulate}}} $|$ \emph{Flutter, Dart, GitHub Actions}}{Oct 2019}
+      %     \resumeItemListStart
+      %       \resumeItem{Simulated the working of \textbf{Epicycloid and Cyclogon Curves}.}
+      %       \resumeItem{Created \textbf{animation} for \textbf{Quick Sort and Bubble Sort} Algorithm.}
+      %     \resumeItemListEnd
+      %     \vspace{-13pt}
+
+      % \resumeProjectHeading
+      %     {\textbf{\underline{\href{https://github.com/yashugarg/Leetcode-Question-Tracker}{Leetcode Question Tracker}}} $|$ \emph{React, Node.js, Express, Web Scraping, Heroku, Netlify}}{Dec 2021}
+      %     \resumeItemListStart
+      %       \resumeItem{Built a \textbf{React app} to view a user's Leetcode profile and keep track of assignment questions from a \textbf{DSA Bootcamp}.}
+      %       \resumeItem{\textbf{Webscraped} files and links from Github to navigate through the app and view questions.}
+      %       \resumeItem{Constructed a \underline{\href{https://github.com/yashugarg/Leetcode-Question-Tracker-Server}{node.js proxy server}} to send requests to \textbf{Leetcode} for logging in and querying user and submission data using \textbf{GraphQL}.}
+      %     \resumeItemListEnd
+      %     \vspace{-13pt}
+
+      % \resumeProjectHeading
+      %     {\textbf{\underline{\href{https://github.com/yashugarg/bidding_app}{Bidder}}} $|$ \emph{Flutter, Dart, Firebase}}{Apr 2021}
+      %     \resumeItemListStart
+      %       \resumeItem{Designed and developed a cross-platform \textbf{mobile application} to virtualize auctions and bidding.}
+      %       \resumeItem{Implemented \textbf{Firebase} services in \textbf{Dart} to enable authentication, lot addition, and auction features.}
+      %       \resumeItem{Built an easy-to-use \textbf{chat-like interface} to place bids.}
+      %       \resumeItem{Enabled checkout and \textbf{payment services} by integrating the \textbf{Razorpay} payment gateway.}
+      %     \resumeItemListEnd
+      %     \vspace{-13pt}
+
+      % \resumeProjectHeading
+      %     {\textbf{\underline{\href{https://github.com/yashugarg/User-Analysis-using-Random-Forest}{User Analysis using Random Forest}}} $|$ \emph{Python, Jupyter Notebook, matplotlib, sklearn}}{Apr 2020}
+      %     \resumeItemListStart
+      %       \resumeItem{Implemented Random Forest to classify and predict if a borrower paid back their loan in full.}
+      %       \resumeItem{Improved the accuracy of a prediction model by 15\% through a comparative study between Decision Tree and Random Forest Classifier.}
+      %     \resumeItemListEnd
+      %     \vspace{-13pt}
+
+      % \resumeProjectHeading
+      %     {\textbf{\underline{\href{https://github.com/yashugarg/Using-NLP-to-classify-yelp-reviews}{Review Classification using NLP}}} $|$ \emph{Python, Jupyter Notebook, matplotlib, sklearn}}{May 2020}
+      %     \resumeItemListStart
+      %       \resumeItem{Enforced Natural Language Processing to classify YELP reviews into 1-star or 5-star categories based on the text content in the reviews.}
+      %       \resumeItem{Tried using Tf-Idf after text pre-processing to study that the average accuracy jumped from 93\% to 81\%.}
+      %     \resumeItemListEnd
+      %     \vspace{-13pt}
+
+      % \resumeProjectHeading
+      %     {\textbf{Other Projects} $|$ \emph{Python, CockroachDB, MATLAB, Unity 3D, C\#, Java}}{}
+      %     \resumeItemListStart
+      %       \resumeItem{\textbf{Discord Bot:} Created a chatbot to play music, surf the web, and play trivia games using Discord.py.}
+      %       \resumeItem{\textbf{ODE Plotter:} Implemented GUI functionality for ODE model visualization using MATLAB.}
+      %       \resumeItem{\textbf{The Car Game:} Built an interactive 3D game using the Unity engine.}
+      %       \resumeItem{\textbf{Quiz Application:} Developed a desktop application to take a quiz using Java Swing.}
+      %     \resumeItemListEnd
+      %     \vspace{-13pt}
+
+    \resumeSubHeadingListEnd
+\vspace{5pt}
+
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.2in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, Go, C++, TypeScript, JavaScript, SQL} \\
+     \textbf{Tools/Frameworks}{: AWS, Terraform, React, Node.js, NextJS, Flutter, Vitest, Cypress} \\
+     \textbf{Databases}{: PostgreSQL, MySQL, MongoDB, CockroachDB, Firebase} \\
+    }}
+ \end{itemize}
+ \vspace{-10pt}
+
+
+
+%-----------INVOLVEMENT---------------
+\section{Leadership / Extracurricular}
+    \begin{itemize}[leftmargin=0.2in]
+        \small{
+        % \item{
+        % \textbf{Led a team of 6 people} for a Zenskar Internal Hackathon shipping the AI for GTM working prototype in a week.}
+        % \vspace{-5pt}
+        \item{\textbf{Led 5 developers} on a freelance iOS social/events platform for Stanford students.}
+        \vspace{-5pt}
+        \item{
+        \textbf{Selected for Girlscript Summer of Code in 2020 and 2021} with Project Simulate, mentoring 80+ students in both cohorts.}
+        }
+    \end{itemize}
+
+
+%-----------PUBLICATIONS---------------
+% \section{Publications}
+% \small{\textbf{\href{https://link.springer.com/article/10.1007/s13278-024-01230-z}{A novel influence quantification model on Instagram using data science approach for targeted business advertising and better digital marketing outcomes. \faExternalLink*}}}
+
+
+
+%------RELEVANT COURSEWORK-------
+% \section{Relevant Coursework}
+%     %\resumeSubHeadingListStart
+%         \begin{multicols}{4}
+%             \begin{itemize}[itemsep=-5pt, parsep=3pt]
+%                 \item\small Data Structures
+%                 \item Software Methodology
+%                 \item Algorithms Analysis
+%                 \item Database Management
+%                 \item Artificial Intelligence
+%                 \item Internet Technology
+%                 \item Systems Programming
+%                 \item Computer Architecture
+%             \end{itemize}
+%         \end{multicols}
+%         \vspace*{2.0\multicolsep}
+%     %\resumeSubHeadingListEnd
+
+\end{document}
